@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
@@ -54,19 +55,20 @@ class DemoFragment : Fragment() {
                 TestSearchToolbarMenuItem.values().toList()
             ) {
                 when (it) {
-                    TestSearchToolbarMenuItem.SORT -> {
-
-                    }
-                    TestSearchToolbarMenuItem.DELETE -> {
-
-                    }
-                    TestSearchToolbarMenuItem.FILTER -> {
-
-                    }
+                    TestSearchToolbarMenuItem.SORT -> showNotImplementedToast()
+                    TestSearchToolbarMenuItem.DELETE -> showNotImplementedToast()
+                    TestSearchToolbarMenuItem.FILTER -> showNotImplementedToast()
                 }
             }
+            stvToolbar.leftButtonCallback { showNotImplementedToast() }
+            stvToolbar.rightButtonCallback { showNotImplementedToast() }
+            stvToolbar.setSearchCallback { showNotImplementedToast() }
         }
-
     }
+
+    private fun showNotImplementedToast() = Toast.makeText(
+        context,
+        getString(R.string.not_implemented), Toast.LENGTH_SHORT
+    ).show()
 
 }

@@ -16,6 +16,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:toolbar_title="@string/toolbar_title"
+            app:right_button="@drawable/ic_menu"
             app:show_back_button="true"
             app:show_search="true" />
 
