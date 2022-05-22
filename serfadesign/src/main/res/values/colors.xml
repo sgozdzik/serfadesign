@@ -1,0 +1,7 @@
+<resources>
+    <color name="serfaDesignDarkAccent">#FF000000</color>
+    <color name="serfaDesignPrimaryDark">#263238</color>
+    <color name="serfaDesignPrimaryDark_alpha_50">#80263238</color>
+    <color name="serfaDesignAccent">#FFFFFF</color>
+    <color name="serfaDesignAccent_alpha_50">#80FFFFFF</color>
+</resources>

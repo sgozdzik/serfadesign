@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SearchToolbar">
+        <attr name="toolbar_title" format="string" />
+        <attr name="show_search" format="boolean"/>
+        <attr name="show_back_button" format="boolean"/>
+        <attr name="right_button" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ShadowButtonView">
+        <attr name="button_title" format="string" />
+        <attr name="button_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingView">
+        <attr name="animation_raw_res" format="reference" />
+    </declare-styleable>
+</resources>

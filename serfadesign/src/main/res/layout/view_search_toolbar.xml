@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/serfaDesignPrimaryDark"
+        android:elevation="@dimen/elevation_small"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/left_button"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_marginStart="@dimen/margin_big"
+            android:src="@drawable/ic_menu_back"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbarTitle"
+            app:tint="@color/serfaDesignAccent_alpha_50" />
+
+        <View
+            android:id="@+id/left_click"
+            android:layout_width="@dimen/icon_click_area"
+            android:layout_height="@dimen/icon_click_area"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/right_button"
+            android:layout_width="@dimen/small_icon_size"
+            android:layout_height="@dimen/small_icon_size"
+            android:layout_marginEnd="@dimen/margin_big"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/toolbarTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbarTitle"
+            app:tint="@color/serfaDesignAccent_alpha_50" />
+
+        <View
+            android:id="@+id/right_click"
+            android:layout_width="@dimen/icon_click_area"
+            android:layout_height="@dimen/icon_click_area"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_normal"
+            android:fontFamily="sans-serif-light"
+            android:text=""
+            android:textColor="@color/serfaDesignAccent_alpha_50"
+            android:textSize="@dimen/text_big_size"
+            app:layout_constraintBottom_toTopOf="@+id/search_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_extra_big"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:background="@drawable/round_background"
+            android:backgroundTint="@color/serfaDesignAccent_alpha_50"
+            android:hint="@string/search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/margin_small"
+            android:textColorHint="@color/serfaDesignAccent_alpha_50"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:padding="@dimen/margin_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--  Text sizes  -->
+    <dimen name="text_extra_small_size">10sp</dimen>
+    <dimen name="text_small_size">12sp</dimen>
+    <dimen name="text_normal_size">15sp</dimen>
+    <dimen name="text_big_size">17sp</dimen>
+
+    <!--  Elevation sizes  -->
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+
+    <!--  Icon sizes  -->
+    <dimen name="icon_size">32dp</dimen>
+    <dimen name="small_icon_size">20dp</dimen>
+    <dimen name="icon_click_area">60dp</dimen>
+    <dimen name="extra_small_icon_size">16dp</dimen>
+
+    <!--  Margin sizes  -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_big">26dp</dimen>
+    <dimen name="margin_extra_big">32dp</dimen>
+
+</resources>
