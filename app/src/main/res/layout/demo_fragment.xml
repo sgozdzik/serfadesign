@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <xyz.gozdzik.serfadesign.searchtoolbar.SearchToolbarView
+            android:id="@+id/stv_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:toolbar_title="@string/toolbar_title"
+            app:show_back_button="true"
+            app:show_search="true" />
+
+        <xyz.gozdzik.serfadesign.common.LoadingView
+            android:id="@+id/lv_loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stv_toolbar" />
+
+        <xyz.gozdzik.serfadesign.common.ShadowButtonView
+            android:id="@+id/sbv_bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:button_title="@string/show_bottom_sheet"
+            app:layout_constraintBottom_toTopOf="@+id/sbv_loading"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <xyz.gozdzik.serfadesign.common.ShadowButtonView
+            android:id="@+id/sbv_loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:button_title="@string/show_loading_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SerfaDesignExample</string>
+    <string name="toolbar_title">Serfa Design Example</string>
+    <string name="show_bottom_sheet">Show bottom sheet</string>
+    <string name="show_loading_view">Show loading view</string>
+    <string name="test_choice_title">Test Choice Title</string>
+    <string name="test_choice_1">Test choice 1</string>
+    <string name="test_choice_2">Test choice 2</string>
+    <string name="test_choice_3">Test choice 3</string>
 </resources>
