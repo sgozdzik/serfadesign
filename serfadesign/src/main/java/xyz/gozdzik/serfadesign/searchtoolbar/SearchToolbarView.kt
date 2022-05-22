@@ -8,7 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import xyz.gozdzik.serfadesign.R
 import xyz.gozdzik.serfadesign.databinding.ViewSearchToolbarBinding
-import xyz.gozdzik.serfadesign.searchtoolbar.common.addOnTextChangedListener
+import xyz.gozdzik.serfadesign.utils.addOnTextChangedListener
 
 class SearchToolbarView : ConstraintLayout {
 

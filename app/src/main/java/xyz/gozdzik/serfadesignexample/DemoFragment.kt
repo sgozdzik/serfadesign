@@ -50,6 +50,21 @@ class DemoFragment : Fragment() {
             lvLoadingView.setOnClickListener {
                 lvLoadingView.visibility = View.GONE
             }
+            stvToolbar.setMenuButtons(
+                TestSearchToolbarMenuItem.values().toList()
+            ) {
+                when (it) {
+                    TestSearchToolbarMenuItem.SORT -> {
+
+                    }
+                    TestSearchToolbarMenuItem.DELETE -> {
+
+                    }
+                    TestSearchToolbarMenuItem.FILTER -> {
+
+                    }
+                }
+            }
         }
 
     }

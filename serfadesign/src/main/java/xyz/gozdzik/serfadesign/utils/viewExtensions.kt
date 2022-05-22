@@ -1,4 +1,4 @@
-package xyz.gozdzik.serfadesign.searchtoolbar.common
+package xyz.gozdzik.serfadesign.utils
 
 import android.text.Editable
 import android.text.TextWatcher
