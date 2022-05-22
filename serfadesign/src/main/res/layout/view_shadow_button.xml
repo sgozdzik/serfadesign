@@ -14,7 +14,7 @@
             android:id="@+id/button_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:textColor="@color/serfaDesignAccent"
             android:textSize="@dimen/text_normal_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

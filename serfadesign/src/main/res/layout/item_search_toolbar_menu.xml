@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
             android:text="@{item.displayNameResId}"
-            android:textColor="@color/white"
+            android:textColor="@color/serfaDesignAccent"
             android:textSize="@dimen/text_normal_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_icon"
@@ -39,7 +39,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/white_alpha_50" />
+            app:tint="@color/serfaDesignAccent_alpha_50" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

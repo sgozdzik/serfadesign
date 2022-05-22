@@ -5,7 +5,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/serfaDesignPrimaryDark"
         android:elevation="@dimen/elevation_small"
         android:focusable="true"
         android:focusableInTouchMode="true">
@@ -19,7 +19,7 @@
             app:layout_constraintBottom_toBottomOf="@id/toolbarTitle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbarTitle"
-            app:tint="@color/white_alpha_50" />
+            app:tint="@color/serfaDesignAccent_alpha_50" />
 
         <View
             android:id="@+id/left_click"
@@ -37,7 +37,7 @@
             app:layout_constraintBottom_toBottomOf="@id/toolbarTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/toolbarTitle"
-            app:tint="@color/white_alpha_50" />
+            app:tint="@color/serfaDesignAccent_alpha_50" />
 
         <View
             android:id="@+id/right_click"
@@ -53,7 +53,7 @@
             android:layout_marginVertical="@dimen/margin_normal"
             android:fontFamily="sans-serif-light"
             android:text=""
-            android:textColor="@color/white_alpha_50"
+            android:textColor="@color/serfaDesignAccent_alpha_50"
             android:textSize="@dimen/text_big_size"
             app:layout_constraintBottom_toTopOf="@+id/search_bar"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,13 +67,14 @@
             android:layout_marginHorizontal="@dimen/margin_extra_big"
             android:layout_marginBottom="@dimen/margin_normal"
             android:layout_marginTop="@dimen/margin_normal"
-            android:background="@drawable/round_background_white_50"
+            android:background="@drawable/round_background"
+            android:backgroundTint="@color/serfaDesignAccent_alpha_50"
             android:hint="@string/search"
             android:imeOptions="actionDone"
             android:inputType="text"
             android:maxLines="1"
             android:padding="@dimen/margin_small"
-            android:textColorHint="@color/white_alpha_50"
+            android:textColorHint="@color/serfaDesignAccent_alpha_50"
             app:layout_constraintTop_toBottomOf="@+id/toolbarTitle"
             app:layout_constraintStart_toStartOf="parent" />
 
