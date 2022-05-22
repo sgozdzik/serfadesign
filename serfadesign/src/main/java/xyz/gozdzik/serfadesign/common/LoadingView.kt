@@ -35,9 +35,9 @@ class LoadingView : ConstraintLayout {
         )
         val attrs = attrs ?: return
         context.obtainStyledAttributes(attrs, R.styleable.LoadingView).apply {
-            if (hasValue(R.styleable.LoadingView_animationRawRes)) {
+            if (hasValue(R.styleable.LoadingView_animation_raw_res)) {
                 binding.animationView.setAnimation(
-                    getResourceId(R.styleable.LoadingView_animationRawRes, 0)
+                    getResourceId(R.styleable.LoadingView_animation_raw_res, 0)
                 )
             }
         }

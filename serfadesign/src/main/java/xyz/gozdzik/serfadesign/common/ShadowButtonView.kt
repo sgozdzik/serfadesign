@@ -37,13 +37,13 @@ class ShadowButtonView : ConstraintLayout {
         )
         val attrs = attrs ?: return
         context.obtainStyledAttributes(attrs, R.styleable.ShadowButtonView).apply {
-            if (hasValue(R.styleable.ShadowButtonView_buttonTitle)) {
-                binding.buttonTitle.text = getString(R.styleable.ShadowButtonView_buttonTitle)
+            if (hasValue(R.styleable.ShadowButtonView_button_title)) {
+                binding.buttonTitle.text = getString(R.styleable.ShadowButtonView_button_title)
             }
-            if (hasValue(R.styleable.ShadowButtonView_buttonColor)) {
+            if (hasValue(R.styleable.ShadowButtonView_button_color)) {
                 binding.rootView.backgroundTintList =
                     ColorStateList.valueOf(
-                        getColor(R.styleable.ShadowButtonView_buttonColor, 0)
+                        getColor(R.styleable.ShadowButtonView_button_color, 0)
                     )
             }
             recycle()

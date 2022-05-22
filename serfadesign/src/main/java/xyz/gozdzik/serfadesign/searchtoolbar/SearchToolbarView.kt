@@ -51,6 +51,13 @@ class SearchToolbarView : ConstraintLayout {
                     binding.leftButton.visibility = View.GONE
                 }
             }
+            if (hasValue(R.styleable.SearchToolbar_right_button)) {
+                binding.rightButton.setImageResource(
+                    getResourceId(
+                        R.styleable.SearchToolbar_right_button, 0
+                    )
+                )
+            }
             recycle()
         }
     }

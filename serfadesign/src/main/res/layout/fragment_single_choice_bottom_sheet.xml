@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rv_choice"
-            app:buttonTitle="@string/done" />
+            app:button_title="@string/done" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
