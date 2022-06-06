@@ -16,7 +16,13 @@ You can download apk here:
 // Description in progress
 
 ### How to change colors
-// Description in progress
+You can change default colors overriding this values:
+
+    <color name="serfaDesignDarkAccent">#FF000000</color>
+    <color name="serfaDesignPrimaryDark">#263238</color>
+    <color name="serfaDesignPrimaryDark_alpha_50">#80263238</color>
+    <color name="serfaDesignAccent">#FFFFFF</color>
+    <color name="serfaDesignAccent_alpha_50">#80FFFFFF</color>
 
 ## Available views
 
