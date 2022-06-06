@@ -107,10 +107,77 @@ app:layout_constraintTop_toBottomOf="@+id/search_toolbar" />
 ### Single Choice Bottom Sheet
 ![Screenshot](https://github.com/sgozdzik/serfadesign/blob/master/screenshots/screenshot_bottom_sheet_choice.jpg?raw=true)
 
-// Description in progress
+This view is used when you want the user to select some single option. For example in filtering or sorting. 
+
+**How to implement**
+
+1. Create enum class that will implement `SingleChoiceItem` interface. It should contain resource id for string that should be displayed.
+
+Example:
+
+```
+enum class SortParameter(@StringRes val displayName: Int) : SingleChoiceItem<SortParameter> {
+    BY_NAME_ASC(R.string.sort_by_asc),
+    BY_NAME_DESC(R.string.sort_by_desc),
+    BY_MARKET_CAP(R.string.sort_by_market_cap);
+
+    override val displayNameResId: Int
+        get() = displayName
+
+    override val enum: Enum<SortParameter>
+        get() = this
+
+}
+```
+
+2. Create Fragment that will extend `SortBottomSheetFragment` as base class. It should override functions below:
+
+- `getChoiceItems()` - here you pass list of enum values that implement `SingleChoiceItem`
+- `setNavigationResult(choice: SingleChoiceItem<*>)"` - this function is called after user will make a choice - you can setup navigation result in this function
+- `getTitle()` - title displayed in header
+- `getPreselectedItem()` - you can pass here item that was selected before by the user
+
+Example:
+
+```
+class SortBottomSheetFragment : SingleChoiceBottomSheetFragment<SortParameter>() {
+
+    private val args: SortBottomSheetFragmentArgs by navArgs()
+
+    override fun getChoiceItems(): List<SingleChoiceItem<SortParameter>> = SortParameter
+        .values()
+        .toList()
+
+    override fun setNavigationResult(choice: SingleChoiceItem<SortParameter>) {
+        setFragmentResult(
+            REQUEST_KEY, bundleOf(
+                CHOICE to choice.enum
+            )
+        )
+    }
+
+    override fun getTitle(): String = getString(R.string.sort)
+
+    override fun getPreselectedItem(): SingleChoiceItem<SortParameter> = args.preselectedChoiceItem
+
+    companion object {
+
+        val REQUEST_KEY = "SortBottomSheetRequestKey"
+        val CHOICE = "Choice"
+
+    }}
+```
 
 ### Shadow Button
 ![Screenshot](https://github.com/sgozdzik/serfadesign/blob/master/screenshots/screenshot_button.jpg?raw=true)
 
+SingleChoiceBottomSheetFragment
+
 // Description in progress
+
+**XML parameters:**
+
+- `app:animationRawRes="@raw/"` - json lottie animation
+
+**Example usage:**
 
