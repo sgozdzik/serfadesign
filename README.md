@@ -6,6 +6,8 @@
 
 This library contains some useful common UI components. You can check them on example app. 
 
+At this moment it is very basic version - so all of the components could be improved and have more parameters. It will change in next versions.
+
 You can download apk here:
 
 [**Download APK**](https://google.pl)
@@ -13,7 +15,28 @@ You can download apk here:
 ## How to use
 
 ### How to add library to your project
-// Description in progress
+
+1. Add it in your root build.gradle at the end of repositories:
+
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+
+2. Add the dependency
+
+
+```
+	dependencies {
+	        implementation 'com.github.sgozdzik:serfadesign:version'
+	}
+```
+
+**Latest version:** 1.0.1
 
 ### How to change colors
 You can change default colors overriding this values:
@@ -143,7 +166,7 @@ enum class SortParameter(@StringRes val displayName: Int) : SingleChoiceItem<Sor
 - `getTitle()` - title displayed in header
 - `getPreselectedItem()` - you can pass here item that was selected before by the user
 
-Example:
+**Example:**
 
 ```
 class SortBottomSheetFragment : SingleChoiceBottomSheetFragment<SortParameter>() {
@@ -177,13 +200,23 @@ class SortBottomSheetFragment : SingleChoiceBottomSheetFragment<SortParameter>()
 ### Shadow Button
 ![Screenshot](https://github.com/sgozdzik/serfadesign/blob/master/screenshots/screenshot_button.jpg?raw=true)
 
-SingleChoiceBottomSheetFragment
-
-// Description in progress
+Just a simple button that you can use.
 
 **XML parameters:**
 
-- `app:animationRawRes="@raw/"` - json lottie animation
+- `app:button_color=""` - background color for button
+- `app:button_title=""` - displayed name of button
 
 **Example usage:**
 
+```
+<xyz.gozdzik.serfadesign.common.ShadowButtonView
+android:id="@+id/sbv_loading"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_marginHorizontal="@dimen/margin_normal"
+android:layout_marginBottom="@dimen/margin_normal"
+app:button_title="@string/show_loading_view"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent" />
+```
