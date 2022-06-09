@@ -8,10 +8,6 @@ This library contains some useful common UI components. You can check them on ex
 
 At this moment it is very basic version - so all of the components could be improved and have more parameters. It will change in next versions.
 
-You can download apk here:
-
-[**Download APK**](https://google.pl)
-
 ## How to use
 
 ### How to add library to your project
@@ -36,7 +32,7 @@ You can download apk here:
 	}
 ```
 
-**Latest version:** 1.0.1
+**Latest version:** 0.1.0.1
 
 ### How to change colors
 You can change default colors overriding this values:
